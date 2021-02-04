@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/LukeBax101/lukebaxnet/issues"
   },
-  "homepage": "https://github.com/LukeBax101/lukebaxnet#readme"
+  "homepage": "https://github.com/LukeBax101/lukebaxnet#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }

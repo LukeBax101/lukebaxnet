@@ -1,0 +1,19 @@
+{
+  "name": "lukebaxnet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LukeBax101/lukebaxnet.git"
+  },
+  "author": "Luke Baxter",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LukeBax101/lukebaxnet/issues"
+  },
+  "homepage": "https://github.com/LukeBax101/lukebaxnet#readme"
+}

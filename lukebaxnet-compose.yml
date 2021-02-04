@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  lukebaxnet:
+    container_name: lukebaxnet
+    build:
+      context: .
+    ports:
+      - "8081:8080"
+    volumes:
+      - ./www:/usr/src/www

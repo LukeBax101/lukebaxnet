@@ -1,7 +1,12 @@
 import logMessage from './js/logger'
 import './css/style.css'
 // Log message to console
-logMessage('Welcome to LukeBax.net!');
+logMessage('Welcome to LukeBax.net! Yeehaw!');
+
+// Needed for Hot Module Replacement
+if(typeof(module.hot) !== 'undefined') {
+  module.hot.accept() // eslint-disable-line no-undef  
+}
 
 const letters = document.querySelectorAll('#logo path');
 console.log(letters);
@@ -16,5 +21,4 @@ CSS.registerProperty( {
         initialValue: '0%',
         inherits: true
     }
-
 );

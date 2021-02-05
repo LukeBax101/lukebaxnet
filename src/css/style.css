@@ -57,7 +57,7 @@ nav {
     border-radius: 50%;
     height: 20vh;
     width: 20vh;
-    background: url(../img/lukeheadshot.jpg);
+    background: url(../img/AscotPhoto2.jpg);
     background-size: cover;
     background-position: 50%;
     animation: zoom 8s ease forwards;
@@ -69,12 +69,11 @@ nav {
     font-size: 40px;
     font-family: 'Fira Sans', sans-serif;
     animation: swing-down-a 8s ease-in-out forwards;
-        /* swing-down-b 1s ease-in-out forwards 7s,
-        swing-down-c 1s ease-in-out forwards 8s,
-        swing-down-d 1s ease-in-out forwards 9s; */
+    text-align: center;
     color: white;
     transform-origin: 0% -450%;
     z-index: 1;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
 }
 
 
@@ -228,16 +227,19 @@ li {
 @keyframes swing-down-a {
     0% {
         color: transparent;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0);
         transform: rotateX(60deg);
     }
 
     75% {
         color: transparent;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0);
         transform: rotateX(60deg);
     }
 
     100% {
         color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
         transform: rotateX(0deg);
     }
 }

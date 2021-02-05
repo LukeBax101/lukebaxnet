@@ -10,7 +10,7 @@ body {
     /* background: rgba(0,0,0,0.3); */
     background: radial-gradient(circle, #f7b733, var(--pos, 0%), #fc4a1a 0);
 
-    animation: background-init 1s ease forwards 4s;
+    animation: background-init 1s ease forwards 5s;
 }
 
 nav {
@@ -19,6 +19,57 @@ nav {
     display: flex;
     padding: 0px 20px;
 }
+
+.welcome {
+    position: absolute;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    width: 100%;
+    animation: welcome-to 5s ease;
+    color: transparent;
+    font-family: 'Potta One', cursive;
+}
+
+.home {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+#headshot {
+    border-radius: 50%;
+    height: 20vh;
+    width: 20vh;
+    background: url(../img/lukeheadshot.jpg);
+    background-size: cover;
+    background-position: 50%;
+    animation: zoom 8s ease forwards;
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.4);
+    z-index: 2;
+}
+
+.welcome-text {
+    font-size: 40px;
+    font-family: 'Potta One', cursive;
+    animation: swing-down-a 8s ease-in-out forwards;
+        /* swing-down-b 1s ease-in-out forwards 7s,
+        swing-down-c 1s ease-in-out forwards 8s,
+        swing-down-d 1s ease-in-out forwards 9s; */
+    color: white;
+    transform-origin: 0% -450%;
+    z-index: 1;
+}
+
+
 
 .logo {
     flex-grow: 1;
@@ -30,73 +81,73 @@ nav {
     transform-origin: top left;
     transform: translateY(calc(50vh - 50%)) translateX(10vw);
     fill: transparent;
-    animation: fill 2.5s ease forwards 4s;
+    animation: fill 1.5s ease forwards 5s;
 }
 
 #logo path:nth-child(1) {
     stroke-dasharray: 237px;
     stroke-dashoffset: 237px;
-    animation: logo 2s ease forwards;
+    animation: logo 2s ease forwards 0.5s;
 }
 
 #logo path:nth-child(2) {
     stroke-dasharray: 429px;
     stroke-dashoffset: 429px;
-    animation: logo 2s ease forwards 0.2s;
+    animation: logo 2s ease forwards 1.2s;
 }
 
 #logo path:nth-child(3) {
     stroke-dasharray: 461px;
     stroke-dashoffset: 461px;
-    animation: logo 2s ease forwards 0.4s;
+    animation: logo 2s ease forwards 1.4s;
 }
 
 #logo path:nth-child(4) {
     stroke-dasharray: 540px;
     stroke-dashoffset: 540px;
-    animation: logo 2s ease forwards 0.6s;
+    animation: logo 2s ease forwards 1.6s;
 }
 
 #logo path:nth-child(5) {
     stroke-dasharray: 589px;
     stroke-dashoffset: 589px;
-    animation: logo 2s ease forwards 0.8s;
+    animation: logo 2s ease forwards 1.8s;
 }
 
 #logo path:nth-child(6) {
     stroke-dasharray: 532px;
     stroke-dashoffset: 532px;
-    animation: logo 2s ease forwards 1s;
+    animation: logo 2s ease forwards 2s;
 }
 
 #logo path:nth-child(7) {
     stroke-dasharray: 382px;
     stroke-dashoffset: 382px;
-    animation: logo 2s ease forwards 1.2s;
+    animation: logo 2s ease forwards 2.2s;
 }
 
 #logo path:nth-child(8) {
     stroke-dasharray: 47px;
     stroke-dashoffset: 47px;
-    animation: logo 2s ease forwards 1.4s;
+    animation: logo 2s ease forwards 2.4s;
 }
 
 #logo path:nth-child(9) {
     stroke-dasharray: 430px;
     stroke-dashoffset: 430px;
-    animation: logo 2s ease forwards 1.6s;
+    animation: logo 2s ease forwards 2.6s;
 }
 
 #logo path:nth-child(10) {
     stroke-dasharray: 540px;
     stroke-dashoffset: 540px;
-    animation: logo 2s ease forwards 1.8s;
+    animation: logo 2s ease forwards 2.8s;
 }
 
 #logo path:nth-child(11) {
     stroke-dasharray: 315px;
     stroke-dashoffset: 315px;
-    animation: logo 2s ease forwards 2s;
+    animation: logo 2s ease forwards 3s;
 }
 
 
@@ -122,7 +173,7 @@ li {
 }
 
 @keyframes fill {
-    40% {
+    60% {
         fill: white;
         width: 80vw;
         transform: translateY(calc(50vh - 50%)) translateX(10vw);
@@ -148,12 +199,81 @@ li {
     }
 }
 
-@keyframes swing-down {
+@keyframes welcome-to {
     0% {
-        transform: rotateX(-90deg);
+        color: transparent;
+    }
+
+    30% {
+        color: white;
+    }
+
+    60% {
+        color: white;
+    }
+
+    100% {
+        color: transparent;
+    }
+}
+
+@keyframes swing-down-a {
+    0% {
+        color: transparent;
+        transform: rotateX(60deg);
+    }
+
+    75% {
+        color: transparent;
+        transform: rotateX(60deg);
+    }
+
+    100% {
+        color: white;
+        transform: rotateX(0deg);
+    }
+}
+/* 
+@keyframes swing-down-b {
+    0% {
+        transform: rotateX(-50deg);
+    }
+
+    100% {
+        transform: rotateX(30deg);
+    }
+}
+
+@keyframes swing-down-c {
+    0% {
+        transform: rotateX(30deg);
+    }
+
+    100% {
+        transform: rotateX(-15deg);
+    }
+}
+@keyframes swing-down-d {
+    0% {
+        transform: rotateX(-15deg);
     }
 
     100% {
         transform: rotateX(0deg);
+    }
+} */
+
+
+@keyframes zoom {
+    0% {
+        transform: scale(0);
+    }
+
+    75% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
     }
 }

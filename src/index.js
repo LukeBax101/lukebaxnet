@@ -1,7 +1,7 @@
 import logMessage from './js/logger'
 import './css/style.css'
 // Log message to console
-logMessage('Welcome to LukeBax.net! Yeehaw!');
+logMessage('Welcome to LukeBax.net!');
 
 // Needed for Hot Module Replacement
 if(typeof(module.hot) !== 'undefined') {

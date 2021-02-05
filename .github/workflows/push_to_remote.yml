@@ -12,7 +12,7 @@ jobs:
       uses: shimataro/ssh-key-action@v2
       with:
          key: ${{ secrets.SSH_PRIVATE_KEY }}
-         name: id_rsa_lukebaxnet # optional
+         name: id_rsa # optional
          known_hosts: ${{ secrets.KNOWN_HOSTS }}
     - run: |
         git remote add lukebaxnet ssh://root@lukebax.net/var/repo/lukebaxnet.git

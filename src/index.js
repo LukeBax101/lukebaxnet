@@ -22,3 +22,7 @@ CSS.registerProperty( {
         inherits: true
     }
 );
+
+
+const centerPanel = document.querySelector('.center-panel');
+logMessage(centerPanel);

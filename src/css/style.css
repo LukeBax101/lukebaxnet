@@ -36,13 +36,21 @@ nav {
 .home {
     position: absolute;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     left: 0;
     top: 0;
     width: 100vw;
     height: 100vh;
+}
+
+.center-panel {
+    height: 50vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #headshot {
@@ -59,7 +67,7 @@ nav {
 
 .welcome-text {
     font-size: 40px;
-    font-family: 'Potta One', cursive;
+    font-family: 'Varela Round', sans-serif;
     animation: swing-down-a 8s ease-in-out forwards;
         /* swing-down-b 1s ease-in-out forwards 7s,
         swing-down-c 1s ease-in-out forwards 8s,

@@ -3,17 +3,14 @@
 
 ## Deployment
 
-### Dev
+### Dev (localhost:8080)
 
 ``` 
 npm i
 npm run buildDev
 npm start
 ```
-localhost:8080
-
-
-### Production (dockerised)
+### Production (dockerised - localhost:8081)
 
 ```
 npm i
@@ -21,10 +18,6 @@ npm run buildProd
 docker-compose -f lukebaxnet-compose.yml down
 docker-compose -f lukebaxnet-compose.yml up --build -d
 ```
-localhost:8081
-
-
-
 ## lukebax.net
 
 - Git actions are in place to deploy to lukebax.net on `git push`

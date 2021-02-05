@@ -67,7 +67,7 @@ nav {
 
 .welcome-text {
     font-size: 40px;
-    font-family: 'Varela Round', sans-serif;
+    font-family: 'Fira Sans', sans-serif;
     animation: swing-down-a 8s ease-in-out forwards;
         /* swing-down-b 1s ease-in-out forwards 7s,
         swing-down-c 1s ease-in-out forwards 8s,

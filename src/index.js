@@ -25,4 +25,5 @@ CSS.registerProperty( {
 
 
 const centerPanel = document.querySelector('.center-panel');
+
 logMessage(centerPanel);

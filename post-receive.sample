@@ -1,0 +1,13 @@
+while read oldrev newrev ref
+do
+    if [[ $ref =~ .*/main$ ]];
+    then
+        echo "Main ref received.  Deploying main branch to production..."
+        git --work-tree=/home/web/lukebaxnet --git-dir=/var/repo/lukebaxnet.git checkout -f main
+        cd /home/web/lukebaxnet
+        chmod +x git_redeploy.sh
+        ./git_redeploy.sh
+    else
+        echo "Ref $ref successfully received.  Doing nothing: only the main branch may be deployed on this server."
+    fi
+done

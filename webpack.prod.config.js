@@ -50,7 +50,12 @@ module.exports = {
       {
         // Loads images into CSS and Javascript files
         test: /\.jpg$/,
-        use: [{loader: "url-loader"}]
+        use: [{loader: "url-loader",  
+        options: {
+				  limit: 1000,
+				  name: 'img/[name].[ext]',
+        }
+      }]
       },
       {
         // Loads CSS into a file when you import it via Javascript
@@ -66,11 +71,24 @@ module.exports = {
         test: /\.s[ac]ss$/i,
         use: [
           // Creates `style` nodes from JS strings
-          "style-loader",
+          {
+            loader: "style-loader",
+          },
           // Translates CSS into CommonJS
-          "css-loader",
+          {
+            loader: "css-loader",
+             options: { url: false},  
+          },
+          {
+            loader: "resolve-url-loader",
+          },
           // Compiles Sass to CSS
-          "sass-loader",
+          {
+            loader: "sass-loader",
+            options: {
+              sourceMap: true,
+            },
+          },
         ],
       }
     ]

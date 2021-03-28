@@ -16,13 +16,113 @@ body {
     height: 100vh;
 }
 
+header {
+    nav {
+        width: 100%;
+        height: 60px;
+        display: grid;
+        grid-template-columns: 20% auto;
+        grid-template-rows: 100%;
 
+        .logo {
+            grid-column: 1/2;
+            height: 100%;
+            width: 100%;
+            max-width: 150px;
+            align-self: center;
+        }
 
-nav {
-    width: 100%;
-    height: 60px;
-    display: flex;
-    padding: 0px 20px;
+        #logo {
+            height: 100%;
+            width: 100%;
+            padding-top: 10px;
+            padding-left: 10px;
+            fill: transparent;
+
+            path:nth-child(1) {
+                stroke-dasharray: 367px;
+                stroke-dashoffset: 367px;
+                animation: logo 2s ease forwards 0.5s, fill-letter 1.5s ease forwards 5s;
+            }
+
+            path:nth-child(2) {
+                stroke-dasharray: 417px;
+                stroke-dashoffset: 417px;
+                animation: logo 2s ease forwards 1.2s,
+                    fill-letter 1.5s ease forwards 5s;
+            }
+
+            path:nth-child(3) {
+                stroke-dasharray: 520px;
+                stroke-dashoffset: 520px;
+                animation: logo 2s ease forwards 1.4s,
+                    fill-letter 1.5s ease forwards 5s;
+            }
+
+            path:nth-child(4) {
+                stroke-dasharray: 365px;
+                stroke-dashoffset: 365px;
+                animation: logo 2s ease forwards 1.6s,
+                    fill-letter 1.5s ease forwards 5s;
+            }
+
+            path:nth-child(5) {
+                stroke-dasharray: 543px;
+                stroke-dashoffset: 543px;
+                animation: logo 2s ease forwards 1.8s,
+                    fill-letter 1.5s ease forwards 5s;
+            }
+
+            path:nth-child(6) {
+                stroke-dasharray: 408px;
+                stroke-dashoffset: 408px;
+                animation: logo 2s ease forwards 2s,
+                    fill-letter 1.5s ease forwards 5s;
+            }
+
+            path:nth-child(7) {
+                stroke-dasharray: 460px;
+                stroke-dashoffset: 460px;
+                animation: logo 2s ease forwards 2.2s,
+                    fill-letter 1.5s ease forwards 5s;
+            }
+
+            path:nth-child(8) {
+                stroke-dasharray: 74px;
+                stroke-dashoffset: 74px;
+                animation: logo 2s ease forwards 2.4s,
+                    fill-letter 1.5s ease forwards 5s;
+            }
+
+            path:nth-child(9) {
+                stroke-dasharray: 437px;
+                stroke-dashoffset: 437px;
+                animation: logo 2s ease forwards 2.6s,
+                    fill-letter 1.5s ease forwards 5s;
+            }
+
+            path:nth-child(10) {
+                stroke-dasharray: 365px;
+                stroke-dashoffset: 365px;
+                animation: logo 2s ease forwards 2.8s,
+                    fill-letter 1.5s ease forwards 5s;
+            }
+
+            path:nth-child(11) {
+                stroke-dasharray: 296px;
+                stroke-dashoffset: 296px;
+                animation: logo 2s ease forwards 3s,
+                    fill-letter 1.5s ease forwards 5s;
+            }
+
+            path:nth-child(12) {
+                stroke-dasharray: 1791px;
+                stroke-dashoffset: 1791px;
+                animation: logo 5s ease forwards 0s,
+                    fill-swirl 1.5s ease forwards 5s;
+            }
+        }
+    }
 }
 
 
@@ -120,11 +220,11 @@ nav {
             // width: 20vh;
             height: 100%;
             width: 100%;
-            border-width: 5px;
+            border-width: 2px;
             align-content: center;
             justify-content: center;
             box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.4);
-            border-style: double;
+            border-style: solid;
             border-color: rgba(224, 34, 56, 0.6);
         }
 
@@ -279,7 +379,7 @@ nav {
             color: rgba(240, 248, 255, 0.8);
             animation: fade 3s ease forwards;
 
-            .projects {
+            .about {
                 @media only screen and (min-width: 600px) {
                     grid-column: 2/3;
                     grid-row: 1/2;
@@ -301,23 +401,31 @@ nav {
                     height:100%;
                 }
 
+                cursor: pointer;
                 border-radius: 5px;
                 border-width: 0px;
                 border-style: solid;
                 margin-left: auto;
                 display: flex;
-                background-color: rgba(224, 34, 56, 1);
+                background-color: rgba(224, 34, 56, 0.8);
+                transition: background-color 0.5s;
+
+                &:hover {
+                    background-color: rgba(224, 34, 56, 1);
+                }
 
                 .button {
                     width: 100%;
                     align-self: center;
+
+                    
                 }
             }
 
-            .about {
+            .projects {
                 @media only screen and (min-width: 600px) {
-                    grid-row: 1/2;
                     grid-column: 4/5;
+                    grid-row: 1/2;
                     width: 100%;
                     max-width: 300px;
                 }
@@ -336,13 +444,18 @@ nav {
                     height: 100%;
                 }
                 
-                height:100%;
+                cursor: pointer;
                 border-radius: 5px;
                 border-width: 2px;
                 border-style: solid;
                 margin-right: auto;
                 display: flex;
                 background-color: rgba(0,0,0, 0.6);
+                transition: all 0.5s;
+
+                &:hover {
+                    background-color: rgba(224, 34, 56, 1);
+                }
 
                 .button {
                     width: 100%;
@@ -364,8 +477,7 @@ nav {
             display: flex;
             justify-content: center;
             color: rgba(224, 34, 56, 1);
-
-
+            animation: fade 3s ease forwards;
 
             #social-group {
                 display: table-cell;
@@ -430,104 +542,32 @@ nav {
 }
 
 
-.logo {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    z-index: 12;
-}
-
-#logo {
-    height: 30px;
-    width: 150px;
-    fill: transparent;
-    animation: fill 1.5s ease forwards 5s;
-    color: rgba(224, 34, 56, 1);
-
-    path:nth-child(1) {
-        stroke-dasharray: 237px;
-        stroke-dashoffset: 237px;
-        animation: logo 2s ease forwards 0.5s;
-    }
-
-    path:nth-child(2) {
-        stroke-dasharray: 429px;
-        stroke-dashoffset: 429px;
-        animation: logo 2s ease forwards 1.2s;
-    }
-
-    path:nth-child(3) {
-        stroke-dasharray: 461px;
-        stroke-dashoffset: 461px;
-        animation: logo 2s ease forwards 1.4s;
-    }
-
-    path:nth-child(4) {
-        stroke-dasharray: 540px;
-        stroke-dashoffset: 540px;
-        animation: logo 2s ease forwards 1.6s;
-    }
-
-    path:nth-child(5) {
-        stroke-dasharray: 589px;
-        stroke-dashoffset: 589px;
-        animation: logo 2s ease forwards 1.8s;
-    }
-
-    path:nth-child(6) {
-        stroke-dasharray: 532px;
-        stroke-dashoffset: 532px;
-        animation: logo 2s ease forwards 2s;
-    }
-
-    path:nth-child(7) {
-        stroke-dasharray: 382px;
-        stroke-dashoffset: 382px;
-        animation: logo 2s ease forwards 2.2s;
-    }
-
-    path:nth-child(8) {
-        stroke-dasharray: 47px;
-        stroke-dashoffset: 47px;
-        animation: logo 2s ease forwards 2.4s;
-    }
-
-    path:nth-child(9) {
-        stroke-dasharray: 430px;
-        stroke-dashoffset: 430px;
-        animation: logo 2s ease forwards 2.6s;
-    }
-
-    path:nth-child(10) {
-        stroke-dasharray: 540px;
-        stroke-dashoffset: 540px;
-        animation: logo 2s ease forwards 2.8s;
-    }
-
-    path:nth-child(11) {
-        stroke-dasharray: 315px;
-        stroke-dashoffset: 315px;
-        animation: logo 2s ease forwards 3s;
-    }
-}
-
 @keyframes logo {
     to {
         stroke-dashoffset: 0;
     }
 }
 
-@keyframes fill {
+@keyframes fill-letter {
     60% {
-        fill: rgba(224, 34, 56, 1);
-        ;
+        fill: white;
     }
 
     100% {
-        fill:rgba(224, 34, 56, 1);
-        ;
+        fill: white;
     }
 }
+
+@keyframes fill-swirl {
+    60% {
+        fill:rgba(224, 34, 56, 1);
+    }
+
+    100% {
+        fill: rgba(224, 34, 56, 1);
+    }
+}
+
 
 @keyframes background-init {
     to {

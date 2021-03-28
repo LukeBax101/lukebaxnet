@@ -78,7 +78,7 @@ nav {
         top: 0;
         left: 0;
         z-index: -1;
-        background: radial-gradient(circle, rgba(0, 0, 0, 0.5) var(--pos, 0%), rgba(0, 0, 0, 1) 0);
+        background: radial-gradient(circle, rgba(0, 0, 0, 0.5) var(--pos, 0%), rgba(0, 0, 0, 1) 0%);
         animation: background-init 1s ease forwards;
     }
 

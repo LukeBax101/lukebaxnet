@@ -1,4 +1,3 @@
-import { register } from 'register-service-worker';
 import firebase from "firebase/app";
 import "firebase/analytics";
 import "firebase/auth";

@@ -1,7 +1,58 @@
+import { register } from 'register-service-worker';
+import firebase from "firebase/app";
+import "firebase/analytics";
+import "firebase/auth";
+import "firebase/firestore";
+import "firebase/messaging";
+
 import logMessage from './js/logger'
 import './css/style.scss'
 // Log message to console
 logMessage('Welcome to LukeBax.net!');
+
+var firebaseConfig = {
+    apiKey: "AIzaSyAUUJniO6QHXeKihArx1vcSd1YsfXVhe70",
+    authDomain: "lukebaxnet.firebaseapp.com",
+    projectId: "lukebaxnet",
+    storageBucket: "lukebaxnet.appspot.com",
+    messagingSenderId: "702862570223",
+    appId: "1:702862570223:web:a5088a9acedb837759211a",
+    measurementId: "G-XW0RMDJ7HX"
+  };
+// Initialize Firebase
+
+
+firebase.initializeApp(firebaseConfig);
+firebase.analytics();
+
+
+const messaging = firebase.messaging();
+navigator.serviceWorker.register('/lukebaxnet-service-worker.js').then(registration => {
+  // firebase.messaging().useServiceWorker(registration)
+  console.log(registration)
+  if (registration.waiting) {
+     registration.waiting.postMessage({ type: 'SKIP_WAITING' });
+  }
+  messaging.getToken({ vapidKey: 'BHkv3xaINTj0gjxEV4e5OaG2EVcNkisxbenSosZo3sVazU9S3du1hUushzlgZqww_aynLLcJYsA_bnyXd3A_i-8', serviceWorkerRegistration: registration }).then((currentToken) => {
+    if (currentToken) {
+      // Send the token to your server and update the UI if necessary
+      // ...
+      console.log(currentToken);
+    } else {
+      // Show permission request UI
+      console.log('No registration token available. Request permission to generate one.');
+      // ...
+    }
+  }).catch((err) => {
+    console.log('An error occurred while retrieving token. ', err);
+    // ...
+  });
+})
+
+messaging.onMessage((payload) => {
+  console.log('Message received. ', payload);
+  // ...
+});
 
 // Needed for Hot Module Replacement
 if(typeof(module.hot) !== 'undefined') {
@@ -20,6 +71,7 @@ CSS.registerProperty( {
         inherits: true
     }
 );
+
 
 // const centerPanel = document.querySelector('.headshot');
 

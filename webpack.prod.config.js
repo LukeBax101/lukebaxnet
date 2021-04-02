@@ -106,7 +106,8 @@ module.exports = {
     }),
     new CopyWebpackPlugin({
       patterns: [
-	    {from:'src/img',to:'img'} 
+      {from:'src/img',to:'img'} ,
+      {from:'src/server/lukebaxnet-service-worker.js', to: 'lukebaxnet-service-worker.js'}
 	  ]}),
   ]
 }

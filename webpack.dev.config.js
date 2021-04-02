@@ -1,6 +1,7 @@
 const path = require('path')
 const webpack = require('webpack')
 const HtmlWebPackPlugin = require('html-webpack-plugin')
+const CopyWebpackPlugin = require("copy-webpack-plugin")
 module.exports = {
   entry: {
     main: ['webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000', './src/index.js']
@@ -60,6 +61,11 @@ module.exports = {
       excludeChunks: [ 'server' ]
     }),
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoEmitOnErrorsPlugin()
+    new webpack.NoEmitOnErrorsPlugin(),
+    new CopyWebpackPlugin({
+      patterns: [
+      {from:'src/img',to:'img'} ,
+      {from:'src/server/lukebaxnet-service-worker.js', to: 'lukebaxnet-service-worker.js'}
+	  ]})
   ]
 }

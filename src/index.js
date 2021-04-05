@@ -72,7 +72,11 @@ CSS.registerProperty( {
 );
 
 
-// const centerPanel = document.querySelector('.headshot');
+const pingButton = document.querySelector('#ping');
+
+pingButton.addEventListener('click', () => {
+  console.log('ping');
+})
 
 // centerPanel.addEventListener('mousemove', (e) => {
 //   const panelRect = centerPanel.getBoundingClientRect();

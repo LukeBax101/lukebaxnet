@@ -7,14 +7,13 @@
 
 ``` 
 npm i
-npm run buildDev
-npm start
+npm run dev
 ```
 ### Production (dockerised - localhost:8081)
 
 ```
 npm i
-npm run buildProd
+npm run build
 docker-compose -f lukebaxnet-compose.yml down
 docker-compose -f lukebaxnet-compose.yml up --build -d
 ```

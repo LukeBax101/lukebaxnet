@@ -4,7 +4,6 @@ git stash
 git pull
 git stash pop
 npm i
-rm dist -rf
-npm run buildProd
+npm run build
 docker-compose -f lukebaxnet-compose.yml down
 docker-compose -f lukebaxnet-compose.yml up --build -d

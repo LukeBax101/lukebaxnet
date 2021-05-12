@@ -7,4 +7,4 @@ services:
     ports:
       - "8081:8080"
     volumes:
-      - ./dist:/usr/src/dist
+      - ./dist:/usr/src/app/dist

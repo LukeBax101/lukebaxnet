@@ -255,7 +255,7 @@ header {
         left: 0;
         z-index: -1;
         background: radial-gradient(circle, rgba(0, 0, 0, 0.5) var(--pos, 100%), rgba(0, 0, 0, 1) 0%);
-        animation: background-init 1s ease forwards;
+        animation: background-init 1.5s ease forwards;
     }
 
     .headshot {

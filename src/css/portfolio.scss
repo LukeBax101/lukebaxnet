@@ -19,7 +19,6 @@ html {
        'Open Sans',
        'Helvetica Neue',
        sans-serif;
-
 }
 
 .portfolio-section {
@@ -28,7 +27,8 @@ html {
     position: absolute;
     // background-image: linear-gradient(60deg, #3d3393 0%, #2b76b9 37%, #2cacd1 65%, #35eb93 100%);
     // background-image: linear-gradient(-225deg, #FF3CAC 0%, #562B7C 52%, #2B86C5 100%);
-    background-image: linear-gradient(-225deg, #FF057C 0%, #8D0B93 50%, #321575 100%);
+    // background-image: linear-gradient(-225deg, #FF057C 0%, #8D0B93 50%, #321575 100%);
+    background-image: linear-gradient(-225deg,rgb(24,24,24) 0%, 90%, rgba(224, 34, 56, 0.8) 100%);
 
     top: 0;
     left: 0;
@@ -41,58 +41,160 @@ html {
         flex-direction: column;
         align-items: center;
 
-        // background-image: url(../img/AscotPhoto.jpg);
-        // background-size: cover;
-        // background-repeat: no-repeat;
-
         .portfolio-title {
             color: white;
             padding: 30px;
+            @media only screen and (min-width: 600px) {
+                font-size: 4rem;
+            }
+
+            @media only screen and (max-width: 600px) {
+                font-size: 2rem;
+            }
             text-align: center;
         }
 
         .portfolio-list {
-            // background: red;
             height: 90vh;
-            width: 60vw;
+            width: 100vw;
+            padding: 2vh 15vw;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-evenly;
             align-content: flex-start;
             z-index: 10;
             overflow-y: scroll;
-            // &::before {
-            //     content: '';
-            //     display: block;
-            //     position: absolute;
-            //     top: 0;
-            //     width: 100%;
-            //     height: 40px;
-            //     background-image: linear-gradient(to top, rgba(255,255,255,0), #fff);
-            //     pointer-events: none;
-            // }
-            
-            // &::after {
-            //     content: '';
-            //     display: block;
-            //     position: absolute;
-            //     bottom: 0;
-            //     width: 100%;
-            //     height: 40px;
-            //     background-image: linear-gradient(to bottom, rgba(255,255,255,0), #fff);
-            //     pointer-events: none;
-            // }
+            -ms-overflow-style: none;
+            scrollbar-width: none;
 
-            .card {
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            .card-container {
+                transition: width 0.5s height 0.5s;
+                z-index: 50;
                 margin: 1rem 1rem;
                 width: 15rem;
                 height: 20rem;
-                z-index: 30;
-                // background-color: linear-gradient(to bottom, rgba(255,255,255,0), #fff);
-                background: linear-gradient(to right bottom, rgba(255,255,255,0.5), rgba(255,255,255,0.2));
-                backdrop-filter: blur(2rem);
-                border-radius: 2rem;
-                box-shadow: 5px 5px 15px rgba(127,127,127,0.3);
+
+                &.clicked {
+                    width: 50vw;
+                    height: 30vh;
+                    cursor: default;
+
+                    .card {
+                        box-shadow: 5px 5px 15px rgba(127, 127, 127, 0.3),
+                            0px 0px 20px rgba(255, 255, 255, 0.6);
+
+                        .fa-chevron-down {
+                            display: none;
+                        }
+
+                        .description .short {
+                            display: none;
+                        }
+
+                        .expanded {
+                            width: 100%;
+                            display: flex;
+                            color: white;
+                            justify-content: space-evenly;
+                            align-items: center;
+                            padding: 0 1rem;
+
+                            .app-link {
+                                display: flex;
+                                align-items: center;
+                                text-align: center;
+                                justify-content: center;
+                                color: white;
+                                width: 30%;
+                                height: 40px;
+                                text-decoration: none;
+                                border: 1px solid rgba(256, 256, 256, 0.6);
+                                border-radius: 6px;
+                                font-weight: 600;
+                                box-shadow: 
+                                    0px 0px 10px rgba(255, 255, 255, 0.3),
+                                    inset 0px 0px 10px rgba(255,255,255,0.3);
+                                position: relative;
+                                font-size: 1rem;
+
+                            }
+
+                            .git-link {
+                                display: flex;
+                                text-decoration: none;
+                                align-items: center;
+                                justify-content: center;
+                                font-size: 30px;
+                                width: 40px;
+                                height: 40px;
+                                color: rgba(256, 256, 256, 0.6);
+                                border-radius: 6px;
+                                border: 1px solid rgba(256, 256, 256, 0.6);
+                                box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3),
+                                inset 0px 0px 10px rgba(255, 255, 255, 0.3);
+                             }
+                        }
+
+                       
+                    }
+                }
+
+                &:not(.clicked) {
+                    cursor: pointer;
+
+                    .card {
+                        .expanded {
+                            display: none;
+                        }
+
+                        .description .long {
+                            display: none;
+                        }
+                    }
+                }
+
+                .card {
+                    width: 100%;
+                    height: 100%;
+                    padding: 2rem;
+
+                    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2));
+                    backdrop-filter: blur(2rem);
+                    border-radius: 2rem;
+                    box-shadow: 5px 5px 15px rgba(127, 127, 127, 0.3);
+
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    &:hover {
+                        box-shadow: 5px 5px 15px rgba(127, 127, 127, 0.3),
+                            0px 0px 20px rgba(255,255,255,0.6);
+                    }
+
+                    .title {
+                        color: white;
+                    }
+
+                    img {
+                        height: 4rem;
+                        border-radius: 50%;
+                    }
+
+                    p {
+                        color: white;
+                        text-align: center;
+                    }
+
+                    i {
+                        color: white;
+                    }
+                }
             }
         }
 
@@ -102,7 +204,6 @@ html {
             margin-top: 100px;
             margin-left: auto;
             margin-right: auto;
-            // background-color: red;
             background-image: url(../img/undraw_to_the_moon_v1mv.svg);
             background-size: contain;
             background-repeat: no-repeat;

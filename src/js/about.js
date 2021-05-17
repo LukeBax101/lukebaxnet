@@ -30,29 +30,33 @@ const aboutRepeat = () => {
   .setPin('.about')
   .addTo(controller);
 
-  let y = 0;
+  let isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
-  let isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+  if (!isMobile) {
+    let y = 0;
 
-  if(isChrome){
-    controller.scrollPos(function () {
-      return y;
-    });
-  }
+    let isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
 
-  let scroll = Scrollbar.init(
-    document.querySelector(".about")
-  );
-
-  scroll.addListener(function(status) {
-    y = status.offset.y;
-    
-    if(isChrome){ 
-      controller.update();
-    } else {
-      scene.refresh();       
+    if(isChrome){
+      controller.scrollPos(function () {
+        return y;
+      });
     }
-  });
+
+    let scroll = Scrollbar.init(
+      document.querySelector(".about")
+    );
+
+    scroll.addListener(function(status) {
+      y = status.offset.y;
+      
+      if(isChrome){ 
+        controller.update();
+      } else {
+        scene.refresh();       
+      }
+    });
+  } 
 }
 
 export { aboutInit, aboutRepeat };

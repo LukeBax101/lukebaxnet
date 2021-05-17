@@ -8,7 +8,7 @@ html {
     visibility: visible;
     opacity: 1;
     min-height: 100%;
-     height: 100%;
+    height: 100%;
     font-family:-apple-system,
        BlinkMacSystemFont,
        'Segoe UI',
@@ -19,7 +19,7 @@ html {
        'Open Sans',
        'Helvetica Neue',
        sans-serif;
-
+    background-color: rgb(24,24,24);
 }
 
 body {
@@ -149,6 +149,37 @@ header {
     }
 }
 
+.lazy {
+    visibility: hidden;
+    height: 0px;
+    width: 0px;
+    position: absolute;
+
+    &.background {
+        background-image: url('../img/Background_mini.png');
+    }
+
+    &.mountain {
+        background-image: url('../img/Mountain_mini.png');
+    }
+
+    &.machu {
+        background-image: url('../img/Machu_Pichu_mini.png');
+    }
+
+    &.luke {
+        background-image: url('../img/Luke_mini.png');
+    }
+
+    &.desk {
+        background-image: url('../img/desk-mini.jpg');
+    }
+
+    &.headshot {
+        background-image: url('../img/headshot_mini.jpg');
+    }
+}
+
 .ping {
     position: absolute;
     z-index: 100;
@@ -242,7 +273,6 @@ header {
         position: absolute;
         width: 100%;
         height: 100vh;
-        background: url(../img/desk-mini.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         filter: grayscale(20%);
@@ -308,7 +338,6 @@ header {
             border-radius: 6%;
             height: 85%;
             width: 85%;
-            background: url(../img/AscotPhoto3.jpg);
             background-size: cover;
             background-position: 50%;
             box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.4);

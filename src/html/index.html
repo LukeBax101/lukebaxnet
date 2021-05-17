@@ -5,7 +5,6 @@
     <style>
         html {
             visibility: hidden;
-            opacity: 1;
             background-color: rgb(24,24,24);
         }
     </style>
@@ -14,9 +13,6 @@
     <title>LukeBax</title>
     <link rel="shortcut icon" href="../favicon.ico" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="../css/index.scss">
-    <link rel="stylesheet" href="../css/about.scss">
-    <link rel="stylesheet" href="../css/portfolio.scss">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Potta+One&family=Varela+Round&display=swap&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -44,87 +40,91 @@
         </header>
         <main data-router-wrapper>
             <section data-router-view="home" class="home">
-    
-            <div class="ping">
-                <div class="title">
-                    Ping me!
-                </div>
-                <div class="message">
-                    Send a notification straight to my phone, just to let me know you're here!
-                </div>
-                <div id="ping" class="button">
-                    Ping!
-                </div>
-            </div>
-            <div class="home">
-                <div class="desk"></div>
-                <div class="cover"></div>
-                <div class="headshot">
-                    <div id="headshot-img">
+                <div class="ping">
+                    <div class="title">
+                        Ping me!
                     </div>
-                    <div class="ring"></div>
-                </div>
-                <div class="center-panel">
-                   
-                    <div class="summary">
-                        <div class="first-row">
-                            Luke Baxter
-                        </div>
-                        <div class="second-row summary-1">
-                            Software Engineer
-                        </div>
-                        <div class="second-row divider-1">
-                            ·
-                        </div>
-                        <div class="second-row summary-2">
-                            Leader
-                        </div>
-                        <div class="second-row divider-2">
-                            ·
-                        </div>
-                        <div class="second-row summary-3">
-                            Problem Solver
-                        </div>
+                    <div class="message">
+                        Send a notification straight to my phone, just to let me know you're here!
+                    </div>
+                    <div id="ping" class="button">
+                        Ping!
                     </div>
                 </div>
-                <div class="links">
-                    <div class="local">
-                        <a class="about"  href="./about.html">
-                            <div class="button">
-                                About Me
+                <div class="home">
+                    <img class="desk" src="../img/desk-mini.jpg"></img>
+                    <div class="cover"></div>
+                    <div class="headshot">
+                        <img id="headshot-img" src="../img/headshot_mini.jpg"></img>
+                        <div class="ring"></div>
+                    </div>
+                    <div class="center-panel">
+                        <div class="summary">
+                            <div class="first-row">
+                                Luke Baxter
                             </div>
-                        </a>
-                        <a class="projects" href="./portfolio.html">
-                            <div class="button">
-                                Portfolio
+                            <div class="second-row summary-1">
+                                Software Engineer
                             </div>
-                        </a>
+                            <div class="second-row divider-1">
+                                ·
+                            </div>
+                            <div class="second-row summary-2">
+                                Leader
+                            </div>
+                            <div class="second-row divider-2">
+                                ·
+                            </div>
+                            <div class="second-row summary-3">
+                                Problem Solver
+                            </div>
+                        </div>
                     </div>
-                    <div class="social">
-                        <div id="social-group">
-                            <ul class="social-list">
-                                <li><a href="https://github.com/LukeBax101"><i class="fa fa-github" aria-hidden="true"></i></a></li>
-                                <li><a href="https://www.linkedin.com/in/luke-baxter-591630134"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                <li><a href="https://www.facebook.com/lukebax101/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                            </ul>
+                    <div class="links">
+                        <div class="local">
+                            <a class="about"  href="./about.html">
+                                <div class="button">
+                                    About Me
+                                </div>
+                            </a>
+                            <a class="projects" href="./portfolio.html">
+                                <div class="button">
+                                    Portfolio
+                                </div>
+                            </a>
+                        </div>
+                        <div class="social">
+                            <div id="social-group">
+                                <ul class="social-list">
+                                    <li><a href="https://github.com/LukeBax101"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                                    <li><a href="https://www.linkedin.com/in/luke-baxter-591630134"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                    <li><a href="https://www.facebook.com/lukebax101/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-    </main>
-    <script src="https://kit.fontawesome.com/38ef5b050d.js" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/flipping@latest/dist/flipping.gsap.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
-        integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ=="
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.3.1/smooth-scrollbar.js"></script>
-    <script src="../js/highwayInit.js"></script>
-    <script src="../js/index.js"></script>
-    <script>
-        window.highwayInit();
-    </script>
-</body>
+                <div class="lazy background"></div>
+                <div class="lazy mountain"></div>
+                <div class="lazy machu"></div>
+                <div class="lazy luke"></div>
+            </section>
+        </main>
+        <script src="https://kit.fontawesome.com/38ef5b050d.js" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/flipping@latest/dist/flipping.gsap.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
+            integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ=="
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.3.1/smooth-scrollbar.js"></script>
+        <script src="../js/highwayInit.js"></script>
+        <script src="../js/index.js"></script>
+        <script>
+            window.highwayInit();
+        </script>
+        <link rel="stylesheet" href="../css/index.scss">
+        <link rel="stylesheet" href="../css/about.scss">
+        <link rel="stylesheet" href="../css/portfolio.scss">
+    </body>
 </html>

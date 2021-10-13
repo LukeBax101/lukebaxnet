@@ -1,4 +1,85 @@
+import portfolio from '../../public/portfolio.json'
+
 let selectedCard = null;
+
+const generatePortfolioItems = () => {
+  const items = portfolio.portfolio.map((item, idx) => generateItem(idx, item));
+  const list = document.getElementsByClassName('portfolio-list')[0];
+  list.append(...items);
+}
+
+const generateItem = (idx, details) => {
+  techList = details.stack.map(tech => {
+    const techEl = document.createElement('li');
+    techEl.append(tech);
+    return techEl;
+  })
+
+  const stack = document.createElement('ul');
+  stack.classList.add('stack')
+  stack.append(...techList);
+
+  const appLink = document.createElement('a');
+  appLink.classList.add('app-link');
+  appLink.setAttribute('href', details.appLink ?? '');
+  appLink.setAttribute('target', '_blank');
+  appLink.append('Try it out!');
+
+  const gitIcon = document.createElement('i');
+  gitIcon.classList.add('fa');
+  gitIcon.classList.add('fa-github');
+  gitIcon.setAttribute('aria-hidden', 'true');
+
+  const gitLink = document.createElement('a');
+  gitLink.classList.add('git-link');
+  gitLink.setAttribute('href', details.gitLink);
+  gitLink.setAttribute('target', '_blank');
+  gitLink.appendChild(gitIcon);
+
+  const expanded = document.createElement('div')
+  expanded.classList.add('expanded');
+
+  if (details.appLink) {
+    expanded.append(stack, appLink, gitLink);
+  } else {
+    expanded.append(stack, gitLink);
+  }
+
+  const chevron = document.createElement('i');
+  chevron.classList.add('fas');
+  chevron.classList.add('fa-chevron-down');
+
+  const short = document.createElement('p');
+  short.classList.add('short');
+  short.innerHTML = details.short;
+
+  const long = document.createElement('p');
+  long.classList.add('long');
+  long.innerHTML = details.long;
+
+  const description = document.createElement('div');
+  description.classList.add('description');
+  description.append(short, long);
+
+  const title = document.createElement('h1');
+  title.classList.add('title');
+  title.append(details.title);
+
+  const image = document.createElement('img');
+  image.style.backgroundColor = details.color;
+  image.src = `res/${details.img}`;
+
+  const card = document.createElement("div");
+  card.classList.add('card')
+  card.append(image, title, description, chevron, expanded);
+
+  const cardContainer = document.createElement('div');
+  cardContainer.classList.add('card-container');
+  cardContainer.setAttribute('data-flip-key',`flip-${idx + 1}`)
+  cardContainer.appendChild(card);
+
+  return cardContainer;
+}
 
 const portfolioInit = () => {
   const body = document.querySelector('body');
@@ -25,6 +106,9 @@ const portfolioInit = () => {
         }
       }
   });
+
+  generatePortfolioItems();
+
   console.log('portfolio page initialised');
   window.portfolioInit = true;
 }

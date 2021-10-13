@@ -1,0 +1,109 @@
+{
+    "portfolio": [
+        {
+            "title": "The Post-it Game",
+            "short": "A simple remote party game for when you can't meet in person.",
+            "long": "Also known as \"Heads Up\" or \"The Name Game\", this simple remote party game allows you to give each other a name which they then have to guess using basic yes/no questions posed to the rest of the group.",
+            "stack": ["Vue.js", "Vuex","SocketIO", "Express","Knex","PostgresSQL","PWA","Axois","Bootstrap","EsLint/Babel"],
+            "appLink": "https://lukebax.net/post-it",
+            "gitLink": "https://github.com/LukeBax101/post-it",
+            "img": "post-it.png",
+            "color": "#f6d365"
+        },
+        {
+            "title": "Traccountable",
+            "short": "Keep track of anything you want others to hold you accountable for!",
+            "long": "Keep track of anything you want others to hold you accountable for!",
+            "stack": ["A","B","C"],
+            "appLink": "https://lukebax.net/traccountable",
+            "gitLink": "https://github.com/LukeBax101/Traccountable",
+            "img": "traccountable_logo.svg",
+            "color": "#1765d3"
+        },
+        {
+            "title": "HBC",
+            "short": "Points mean prizes! <br/> A competition management tool for Holiday Bible Clubs.",
+            "long": "Points mean prizes! A competition management tool for Holiday Bible Clubs.",
+            "stack": ["A","B","C"],
+            "appLink": "https://lukebax.net/hbc",
+            "gitLink": "https://github.com/LukeBax101/HBC",
+            "img": "hbc.png",
+            "color": "#E8A643"
+        },
+        {
+            "title": "Face Tracking in VR",
+            "short": "Keep track of those around you whilst immersed in VR.",
+            "long": "Keep track of those around you whilst immersed in VR.",
+            "stack": ["A","B","C"],
+            "gitLink": "https://github.com/LukeBax101/FaceTrackingInVR",
+            "img": "face-vr.png",
+            "color": "rgb(24,24,24)"
+        },
+        {
+            "title": "LukeBaxNet",
+            "short": "My personal website. Fully designed and implemented by yours truly.",
+            "long": "My personal website. Fully designed and implemented by yours truly.",
+            "stack": ["A","B","C"],
+            "appLink": "https://lukebax.net",
+            "gitLink": "https://github.com/LukeBax101/lukebaxnet",
+            "img": "luke-bax.ico",
+            "color": "#4DB7BC"
+        },
+        {
+            "title": "Team Quiz",
+            "short": "Who knows each other the best? Join a team and battle it out!",
+            "long": "Who knows each other the best? Join a team and battle it out!",
+            "stack": ["A","B","C"],
+            "appLink": "https://lukebax.net/team-quiz",
+            "gitLink": "https://github.com/LukeBax101/TeamQuiz",
+            "img": "quiz_icon.png",
+            "color": "#c04912"
+        },
+        {
+            "title": "AutoPrompt",
+            "short": "Web based teleprompter with voice recognition auto-scroll.",
+            "long": "Web based teleprompter with voice recognition, auto-scroll and a built in ability to record video as you speak.",
+            "stack": ["Webpack","HTML5/SCSS/JS","SpeechRecognition API"],
+            "appLink": "https://lukebax.net/autoprompt",
+            "gitLink": "https://github.com/LukeBax101/autoprompt",
+            "img": "autoprompt.png",
+            "color": "#2B73FF"
+        },
+        {
+            "title": "Learn to be an Alien",
+            "short": "Design an alien and it'll learn how to walk!",
+            "long": "Design an alien and it'll learn how to walk!",
+            "stack": ["A","B","C"],
+            "gitLink": "https://github.com/gla23/Juliet-Group-Project-2017",
+            "img": "alien.png",
+            "color": "#c09d28"
+        },
+        {
+            "title": "Find My Drink",
+            "short": "Don't know what cocktails you can make with your ingredients? Don't worry, we'll find you a drink.",
+            "long": "Don't know what cocktails you can make with your ingredients? Don't worry, we'll find you a drink.",
+            "stack": ["A","B","C"],
+            "gitLink": "https://github.com/LukeBax101/FindMyDrink",
+            "img": "find-my-drink.svg",
+            "color": "#ff9a9e"
+        },
+        {
+            "title": "Python's Risk",
+            "short": "Ever fancied playing a game of Risk in Python? See one of my very first creations!",
+            "long": "Ever fancied playing a game of Risk in Python? See one of my very first creations!",
+            "stack": ["A","B","C"],
+            "gitLink": "https://github.com/LukeBax101/RiskBoardGame",
+            "img": "dice.png",
+            "color": "purple"
+        },
+        {
+            "title": "Chat Room",
+            "short": "A basic chat room Andriod app from simpler times.",
+            "long": "A basic chat room Andriod app from simpler times.",
+            "stack": ["A","B","C"],
+            "gitLink": "https://github.com/LukeBax101/LukeBaxChatRoom",
+            "img": "undraw_manage_chats_ylx0.svg",
+            "color": "orange"
+        }
+    ]
+}

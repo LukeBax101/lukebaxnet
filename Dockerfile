@@ -14,6 +14,8 @@ RUN npm i express path
 
 # Bundle app source
 COPY server server
+COPY public public
+COPY dist dist
 
 EXPOSE 8080
 CMD [ "node", "./server/index.js" ]

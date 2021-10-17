@@ -114,14 +114,13 @@ const portfolioInit = () => {
       }
   });
 
-  generatePortfolioItems();
-
   console.log('portfolio page initialised');
   window.portfolioInit = true;
 }
 
 const portfolioRepeat = () => {
   console.log('running portfolio repeat code');
+  generatePortfolioItems();
 
   const flipping = new Flipping();
 

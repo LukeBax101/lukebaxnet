@@ -4,7 +4,7 @@
             "title": "The Post-it Game",
             "short": "A simple remote party game for when you can't meet in person.",
             "long": "Also known as \"Heads Up\" or \"The Name Game\", this simple remote party game allows you to give each other a name which they then have to guess using basic yes/no questions posed to the rest of the group.",
-            "stack": ["Vue.js", "Vuex","SocketIO", "Express","Knex","PostgresSQL","PWA","Axois","Bootstrap","EsLint/Babel"],
+            "stack": ["Vue.js", "Vuex", "Express","Knex","PostgresSQL","PWA","Axois","Bootstrap","EsLint/Babel"],
             "appLink": "https://lukebax.net/post-it",
             "gitLink": "https://github.com/LukeBax101/post-it",
             "img": "post-it.png",
@@ -13,8 +13,8 @@
         {
             "title": "Traccountable",
             "short": "Keep track of anything you want others to hold you accountable for!",
-            "long": "Keep track of anything you want others to hold you accountable for!",
-            "stack": ["A","B","C"],
+            "long": "Struggle to hold yourself accountable for easily trackable and maintainable goals? Traccountable allows you to share your metrics with others so they can hold you accountable too.",
+            "stack": ["Vue.js","Bookshelf","Socket.io", "Axios", "Bootstrap"],
             "appLink": "https://lukebax.net/traccountable",
             "gitLink": "https://github.com/LukeBax101/Traccountable",
             "img": "traccountable_logo.svg",
@@ -23,7 +23,7 @@
         {
             "title": "HBC",
             "short": "Points mean prizes! <br/> A competition management tool for Holiday Bible Clubs.",
-            "long": "Points mean prizes! A competition management tool for Holiday Bible Clubs.",
+            "long": "Manage songs and points sessions with this all-in-one app for running a Holiday Bible Club. ",
             "stack": ["A","B","C"],
             "appLink": "https://lukebax.net/hbc",
             "gitLink": "https://github.com/LukeBax101/HBC",

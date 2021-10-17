@@ -15,10 +15,16 @@ const generateItem = (idx, details) => {
     return techEl;
   })
 
-  const stack = document.createElement('ul');
-  stack.classList.add('stack')
-  stack.append(...techList);
+  const stackList = document.createElement('ul');
+  stackList.classList.add('stack')
+  
+  stackList.append(...techList);
+  
+  const stackTitle = document.createElement('h3');
+  stackTitle.append('Tech Stack');
 
+  const stack = document.createElement('div');
+  stack.append(stackTitle, stackList);
   const appLink = document.createElement('a');
   appLink.classList.add('app-link');
   appLink.setAttribute('href', details.appLink ?? '');
@@ -38,6 +44,7 @@ const generateItem = (idx, details) => {
 
   const expanded = document.createElement('div')
   expanded.classList.add('expanded');
+
 
   if (details.appLink) {
     expanded.append(stack, appLink, gitLink);

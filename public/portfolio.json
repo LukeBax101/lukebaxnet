@@ -23,8 +23,8 @@
         {
             "title": "HBC",
             "short": "Points mean prizes! <br/> A competition management tool for Holiday Bible Clubs.",
-            "long": "Manage songs and points sessions with this all-in-one app for running a Holiday Bible Club. ",
-            "stack": ["A","B","C"],
+            "long": "Manage songs and points sessions with this all-in-one app for running a Holiday Bible Club. One of the first Progressive Web Apps I built - download now and add it to your home screen.",
+            "stack": ["Service Workers","Vue.js","Vuex","Express","Knex"],
             "appLink": "https://lukebax.net/hbc",
             "gitLink": "https://github.com/LukeBax101/HBC",
             "img": "hbc.png",
@@ -33,8 +33,8 @@
         {
             "title": "Face Tracking in VR",
             "short": "Keep track of those around you whilst immersed in VR.",
-            "long": "Keep track of those around you whilst immersed in VR.",
-            "stack": ["A","B","C"],
+            "long": "Ever feel like you don't know where people are in the room around you whilst in VR. This safety tool will calculate where they are and show you in your virtual world!",
+            "stack": ["C#","Python","Computer Vision", "VR"],
             "gitLink": "https://github.com/LukeBax101/FaceTrackingInVR",
             "img": "face-vr.png",
             "color": "rgb(24,24,24)"
@@ -42,8 +42,8 @@
         {
             "title": "LukeBaxNet",
             "short": "My personal website. Fully designed and implemented by yours truly.",
-            "long": "My personal website. Fully designed and implemented by yours truly.",
-            "stack": ["A","B","C"],
+            "long": "My personal website. Fully designed and implemented by yours truly. Take a look around at my portfolio of projects I've made or find out more about me on the \"About\" page.",
+            "stack": ["Babel","Firebase","HTML/CSS/JS"],
             "appLink": "https://lukebax.net",
             "gitLink": "https://github.com/LukeBax101/lukebaxnet",
             "img": "luke-bax.ico",
